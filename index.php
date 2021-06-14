@@ -1,10 +1,9 @@
 <?php
+	include_once "secret.php";
 	$success = "";
 	$error = "";
 	$captchaFail = "";
-	$site = "6Lfdp-saAAAAAPanojRF3ADVuR6SxnPH3AK6YwY6";
 	if(isset($_POST["submit"])) {
-		$secret = "6Lfdp-saAAAAAPZ-0VHc0MuIRyMPFLpBEc4Iy8Gm";
 		$response = $_POST["g-recaptcha-response"];
 		$remoteIP = $_SERVER["REMOTE_ADDR"];
 		$url = "https://www.google.com/recaptcha/api/siteverify?secret=";
